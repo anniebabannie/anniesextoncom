@@ -21,7 +21,7 @@ function App() {
             <div className="text-center text-gray-400 mt-5">Pronouns: she/her</div>
           </div>
           <div className="col-span-2 px-7 text-left">
-            <p className="mb-9 leading-8 text-lg">During my 11 years working as an engineer, I’ve fallen in love with every aspect of product development, from to programming, to strategy, to design. While my roots are in development, I’ve collected a wide breadth of skills across many areas of expertise, thanks to my endless curiosity and hunger for learning.</p>
+            <p className="mb-9 leading-8 text-lg">During my 11 years working as an engineer, I’ve fallen in love with every aspect of product development, from programming, to strategy, to design. While my roots are in development, I’ve collected a wide breadth of skills across many areas of expertise, thanks to my endless curiosity and hunger for learning.</p>
             <p className="leading-8 text-lg mb-9 ">Outside of work I love to travel, cook and write fiction. I was born and raised in the heart of Texas in Austin, and in 2019, after a considerable amount of globe-trotting, I decided to make a home for myself in the lush Pacific Northwest, in Portland, Oregon.</p>
             <p className="leading-8 text-lg">I'm also the proud founder of <a href="https://typist.app" target="_blank" className="text-blue-500">Typist</a>, a refreshingly simple note-taking app for developers.</p>
           </div>
