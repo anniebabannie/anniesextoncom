@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    @apply text-gray-800 tracking-wide;
+  }
+  a {
+    @apply text-teal-600 hover:text-teal-800 tracking-wide;
+  }
+
+  p {
+    @apply mb-6 text-xl leading-8;
+  }
+
+  p:last-of-type {
+    @apply mb-0;
+  }
+}
