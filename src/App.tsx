@@ -11,21 +11,21 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col gap-14 items-center text-center justify-center py-56">
-        <Logo width="644px" height="76px"/>
-        <p className="text-gray-500 uppercase tracking-wider text-xl">Product Developer &nbsp;•&nbsp; Designer &nbsp;•&nbsp; Engineer</p>
-        <div className="max-w-[650px] p-6 rounded-lg bg-gray-50 border-gray-200 border flex gap-10 items-center text-left">
+      <div className="flex flex-col gap-14 items-center text-center justify-center md:py-56 px-10 py-24">
+        <Logo class="max-w-[644px] max-h-[76px] w-full"/>
+        <p className="text-gray-500 uppercase tracking-wider md:text-xl text-base">Product Developer &nbsp;•&nbsp; Designer &nbsp;•&nbsp; Engineer</p>
+        <div className="max-w-[650px] p-6 rounded-lg bg-gray-50 border-gray-200 border flex md:flex-row flex-col gap-10 items-center md:text-left text-center">
           <img src={avatar} width="138" alt="Headshot of Annie Sexton, Product Developer, Designer and Engineer" />
           <div className="text-md leading-7">I'm a multi-faceted product developer with over 11 years of product development experience. I love working with talented teams to craft unparalleled user experiences.</div>
         </div>
       </div>
 
       <div className="bg-gray-100 px-10 py-20 w-full">
-        <div className="container mx-auto flex flex-col gap-40">
-          <div className="grid grid-cols-2 gap-24 items-center">
+        <div className="container mx-auto flex flex-col gap-20 md:gap-40">
+          <div className="grid gap-10 lg:grid-cols-2 md:gap-24 items-center">
             <a href="https://typist.app" target="_blank"><img src={typistPic} alt="Screenshot of Typist website" className="rounded-lg shadow-md shadow-gray-400" /></a>
             <div>
-              <div className="flex justify-between mb-3 items-center">
+              <div className="md:flex md:justify-between mb-3 items-center">
                 <p className="text-4xl uppercase font-bold">Typist</p>
                 <a href="https://typist.app" target="_blank" className="text-2xl">https://typist.app</a>
               </div>
@@ -37,17 +37,17 @@ function App() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-24 items-center">
-            <div>
-              <div className="flex justify-between mb-3 items-center">
+          <div className="grid gap-10 lg:grid-cols-2 md:gap-24 items-center">
+            <div className="order-last lg:order-first">
+              <div className="md:flex md:justify-between mb-3 items-center">
                 <p className="text-4xl uppercase font-bold">Gensho</p>
                 <a href="https://genshoapp.com" target="_blank" className="text-2xl">https://genshoapp.com</a>
               </div>
               <time className="text-lg italic text-gray-400 mb-10 block">Mar 2015 - Apr 2017</time>
               <div className="paragraph">
-                <p className="text-xl leading-8">Gensho is a tool that helps users build foreign language flashcards quickly by looking up words as you highlight them. How it works: Copy and paste in any foreign text (anything you'd like to study from, like song lyrics, news articles, etc). Then simply highlight the words you don't know. You can then download that list of words and their definitions, and upload them to literally any flashcard program. Supported languages: Japanese, Spanish, French, German, and Italian.</p>
-                <p className="text-xl leading-8">Designed, developed and marketed a SaaS product from the ground up, built in Ruby on Rails and ReactJS.</p>
-                <p className="text-xl leading-8">Gensho was a passion project of mine that I eventually turned into a full-fledge SaaS product, and now boasts a healthy following of over 2000 users.</p>
+                <p>Gensho is a tool that helps users build foreign language flashcards quickly by looking up words as you highlight them. How it works: Copy and paste in any foreign text (anything you'd like to study from, like song lyrics, news articles, etc). Then simply highlight the words you don't know. You can then download that list of words and their definitions, and upload them to literally any flashcard program. Supported languages: Japanese, Spanish, French, German, and Italian.</p>
+                <p>Designed, developed and marketed a SaaS product from the ground up, built in Ruby on Rails and ReactJS.</p>
+                <p>Gensho was a passion project of mine that I eventually turned into a full-fledge SaaS product, and now boasts a healthy following of over 2000 users.</p>
               </div>
             </div>
             <a href="https://genshoapp.com" target="_blank"><img src={genshoPic} alt="Screenshot of Gensho website" className="rounded-lg shadow-md shadow-gray-400" /></a>
@@ -69,6 +69,7 @@ function App() {
         <div className="max-w-[800px] mx-auto">
           <ExperienceItem
             company="Render"
+            companySubtitle="Platform-as-a-Service to build and host web services"
           >
             <ExperienceDescription title="Product Lead & UX Engineer" duration="Aug 2021 - Nov 2022">
               <p>Led cross-disciplinary teams to develop platform features that attracted businesses to migrate their applications from our top competitor.</p>
@@ -105,9 +106,9 @@ function App() {
               <p>Built responsive marketing sites featuring rich interactions built-in JavaScript and CSS.</p>
             </ExperienceDescription>
           </ExperienceItem>
-          <div className="grid grid-cols-12">
-            <div className="col-span-3"> </div>
-            <div className="col-span-9">
+          <div className="grid md:grid-cols-12 md:gap-12">
+            <div className="col-span-4"> </div>
+            <div className="col-span-8">
               <div className="bg-gradient-to-b h-44 from-teal-600 to-transparent w-[4px]"> </div>
             </div>
           </div>
