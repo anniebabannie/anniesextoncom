@@ -19,7 +19,7 @@ function App() {
         <p className="text-gray-500 uppercase tracking-wider md:text-xl text-base">Product Developer &nbsp;•&nbsp; Designer &nbsp;•&nbsp; Engineer</p>
         <div className="max-w-[650px] p-6 rounded-lg bg-gray-50 border-gray-200 border flex md:flex-row flex-col gap-10 items-center md:text-left text-center">
           <img src={avatar} width="138" alt="Headshot of Annie Sexton, Product Developer, Designer and Engineer" />
-          <div className="text-md leading-7">I'm a multi-faceted product developer with over 11 years of product development experience. I love working with talented teams to craft unparalleled user experiences.</div>
+          <div className="text-md leading-7">I'm a <strong>multi-faceted product developer</strong> with over 11 years of product development experience, having worked in everything from design to engineering. I love working with talented teams to craft unparalleled user experiences.</div>
         </div>
       </div>
 
