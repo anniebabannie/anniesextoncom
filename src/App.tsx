@@ -1,9 +1,12 @@
 import './App.css'
 import ExperienceItem from './WorkExperienceItem';
-import { ReactComponent as Logo } from "./assets/annie-sexton-logo.svg";
+import logo from "./assets/annie-sexton-logo.png";
 import avatar from "./assets/annie-sexton-headshot.png";
 import typistPic from "./assets/typist-screenshot.jpg";
 import genshoPic from "./assets/gensho-screenshot.jpg";
+import iliLogo from "./assets/logos/ili-track-and-trail-logo.jpg";
+import flexnoteLogo from "./assets/logos/flexnote-logo.jpg";
+import forbesLogo from "./assets/logos/forbes-wellness-logo.jpg";
 import annie1 from "./assets/annie-1.jpg";
 import ExperienceDescription from './ExperienceDescription';
 
@@ -12,7 +15,7 @@ function App() {
   return (
     <>
       <div className="flex flex-col gap-14 items-center text-center justify-center md:py-56 px-10 py-24">
-        <Logo class="max-w-[644px] max-h-[76px] w-full"/>
+        <img src={logo} className="max-w-[644px] max-h-[76px] w-full"/>
         <p className="text-gray-500 uppercase tracking-wider md:text-xl text-base">Product Developer &nbsp;•&nbsp; Designer &nbsp;•&nbsp; Engineer</p>
         <div className="max-w-[650px] p-6 rounded-lg bg-gray-50 border-gray-200 border flex md:flex-row flex-col gap-10 items-center md:text-left text-center">
           <img src={avatar} width="138" alt="Headshot of Annie Sexton, Product Developer, Designer and Engineer" />
@@ -20,16 +23,22 @@ function App() {
         </div>
       </div>
 
-      <div className="bg-gray-100 px-10 py-20 w-full">
+      <div className="bg-[url('assets/light-gradient-bg.png')] bg-cover shadow-inner px-10 py-20 w-full">
         <div className="container mx-auto flex flex-col gap-20 md:gap-40">
           <div className="grid gap-10 lg:grid-cols-2 md:gap-24 items-center">
-            <a href="https://typist.app" target="_blank"><img src={typistPic} alt="Screenshot of Typist website" className="rounded-lg shadow-md shadow-gray-400" /></a>
+            <a href="https://typist.app" target="_blank">
+              <img src={typistPic} alt="Screenshot of Typist website" className="rounded-lg shadow-md shadow-gray-500 ring-4 ring-white" />
+            </a>
             <div>
               <div className="md:flex md:justify-between mb-3 items-center">
                 <p className="text-4xl uppercase font-bold">Typist</p>
                 <a href="https://typist.app" target="_blank" className="text-2xl">https://typist.app</a>
               </div>
-              <time className="text-lg italic text-gray-400 mb-10 block">Nov 2020 - Nov 2022</time>
+              <div className="mb-10 flex items-center gap-4">
+                <div className="uppercase">Founder</div>
+                <div>•</div>
+                <time className="">Nov 2020 - Nov 2022</time>
+              </div>
               <div className="paragraph">
                 <p className="text-xl leading-8">Typist is a refreshingly simple note-taking app built for developers, featuring auto-rendered Github-flavored markdown, ⌘K quick search, code block syntax highlighting, and keyboard shortcuts for days.</p>
                 <p className="text-xl leading-8">I've been on a long journey in search of the perfect writing app: something simple enough to quickly jot down notes, but equipped with the features I appreciate as a developer, such as markdown, code block syntax highlighting, and a myriad of keyboard shortcuts. Many apps came close, but each left me wanting. After years of searching, I decided to roll up my sleeves and build something myself.</p>
@@ -43,30 +52,38 @@ function App() {
                 <p className="text-4xl uppercase font-bold">Gensho</p>
                 <a href="https://genshoapp.com" target="_blank" className="text-2xl">https://genshoapp.com</a>
               </div>
-              <time className="text-lg italic text-gray-400 mb-10 block">Mar 2015 - Apr 2017</time>
+              <div className="mb-10 flex items-center gap-4">
+                <div className="uppercase">Founder</div>
+                <div>•</div>
+                <time className="">Mar 2015 - Apr 2017</time>
+              </div>
               <div className="paragraph">
                 <p>Gensho is a tool that helps users build foreign language flashcards quickly by looking up words as you highlight them. How it works: Copy and paste in any foreign text (anything you'd like to study from, like song lyrics, news articles, etc). Then simply highlight the words you don't know. You can then download that list of words and their definitions, and upload them to literally any flashcard program. Supported languages: Japanese, Spanish, French, German, and Italian.</p>
                 <p>Designed, developed and marketed a SaaS product from the ground up, built in Ruby on Rails and ReactJS.</p>
                 <p>Gensho was a passion project of mine that I eventually turned into a full-fledge SaaS product, and now boasts a healthy following of over 2000 users.</p>
               </div>
             </div>
-            <a href="https://genshoapp.com" target="_blank"><img src={genshoPic} alt="Screenshot of Gensho website" className="rounded-lg shadow-md shadow-gray-400" /></a>
+            <a href="https://genshoapp.com" target="_blank">
+              <img src={genshoPic} alt="Screenshot of Gensho website" className="rounded-lg shadow-md shadow-gray-500 ring-4 ring-white" />
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="bg-white px-10 py-40 w-full">
+      <div className="bg-[url('assets/dark-gradient-bg.png')] bg-cover shadow-inner px-10 py-40 w-full">
         <div className="max-w-[900px] text-center mx-auto paragraph">
           <div className="flex gap-8 justify-center w-full mb-10">
-            <img src={annie1} alt="" className="rounded-lg w-36" />
+            <img src={annie1} alt="" className="rounded-lg w-48 ring-white ring-2 shadow-lg" />
           </div>
-          <p>During my 11 years working as an engineer, I’ve fallen in love with every aspect of product development, from programming, to strategy, to design. While my roots are in development, I’ve collected a wide breadth of skills across many areas of expertise, thanks to my endless curiosity and hunger for learning.</p>
-          <p>Outside of work I love to travel, cook and write fiction. I was born and raised in the heart of Texas in Austin, and in 2019, after a considerable amount of globe-trotting, I decided to make a home for myself in the lush Pacific Northwest, in Portland, Oregon.</p>
+          <p className="text-white">During my 11 years working as an engineer, I’ve fallen in love with every aspect of product development, from programming, to strategy, to design. While my roots are in development, I’ve collected a wide breadth of skills across many areas of expertise, thanks to my endless curiosity and hunger for learning.</p>
+          <p className="text-white">Outside of work I love to travel, cook and write fiction. I was born and raised in the heart of Texas in Austin, and in 2019, after a considerable amount of globe-trotting, I decided to make a home for myself in the lush Pacific Northwest, in Portland, Oregon.</p>
         </div>
       </div>
 
-      <div className="bg-gray-100 px-10 py-20 w-full">
+      <div className="bg-[url('assets/light-gradient-bg.png')] bg-cover shadow-inner px-10 py-20 w-full">
         <div className="max-w-[800px] mx-auto">
+          <h2 className="text-center text-2xl mb-40 mt-20 uppercase opacity-60">Work History</h2>
+
           <ExperienceItem
             company="Render"
             companySubtitle="Platform-as-a-Service to build and host web services"
