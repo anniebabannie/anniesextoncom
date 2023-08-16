@@ -4,11 +4,12 @@ import logo from "./assets/annie-sexton-logo.png";
 import avatar from "./assets/annie-sexton-headshot.png";
 import typistPic from "./assets/typist-screenshot.jpg";
 import genshoPic from "./assets/gensho-screenshot.jpg";
-import iliLogo from "./assets/logos/ili-track-and-trail-logo.jpg";
-import flexnoteLogo from "./assets/logos/flexnote-logo.jpg";
-import forbesLogo from "./assets/logos/forbes-wellness-logo.jpg";
+import thumbnailGit from "./assets/thumbnail-git-organized.png";
+import thumbnailHerokuSSL from "./assets/thumbnail-heroku-ssl.png";
+import thumbnailRubyConf from "./assets/thumbnail-rubyconf2018.png";
 import annie1 from "./assets/annie-1.jpg";
 import ExperienceDescription from './ExperienceDescription';
+import WritingLink from './components/WritingLink';
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
         <p className="text-gray-500 uppercase tracking-wider md:text-xl text-base">Product Developer &nbsp;•&nbsp; Designer &nbsp;•&nbsp; Engineer</p>
         <div className="max-w-[650px] p-6 rounded-lg bg-gray-50 border-gray-200 border flex md:flex-row flex-col gap-10 items-center md:text-left text-center">
           <img src={avatar} width="138" alt="Headshot of Annie Sexton, Product Developer, Designer and Engineer" />
-          <div className="text-md leading-7">I'm a <strong>multi-faceted product developer</strong> with over 11 years of product development experience, having worked in everything from design to engineering. I love working with talented teams to craft unparalleled user experiences.</div>
+          <div className="text-md leading-7">I'm a <strong>multi-faceted product leader and developer</strong> with over 11 years of experience working on everything from software engineering to UX design. I love working with talented teams to craft unparalleled user experiences.</div>
         </div>
       </div>
 
@@ -69,6 +70,38 @@ function App() {
           </div>
         </div>
       </div>
+
+      <div className="bg-heropattern bg-cover shadow-inner px-10 py-40 w-full">
+        <div className="max-w-[900px] text-center mx-auto paragraph">
+        <h2 className="text-center text-4xl mb-20 uppercase font-bold">Technical Writing & Talks</h2>
+
+          <div className="md:flex flex-col gap-5">
+
+            <WritingLink
+              title="Git Organized: A Better Git Flow"
+              desc="Imagine this: you’ve been paged to investigate a production incident, and after some digging, you identify the commit with the breaking code. You decide to revert the change. Unfortunately, in doing so, a new bug is introduced! As it turns out, hidden...."
+              src="https://render.com/blog/git-organized-a-better-git-flow"
+              thumbnail={thumbnailGit}
+            />
+
+            <WritingLink
+              title="Understanding SSL on Heroku"
+              desc="There are two ways to enable SSL for your Heroku app’s custom domains. The options are listed in order of recommended use: Automated Certificate Management (ACM) and Heroku SSL. In general, Automated..."
+              src="https://devcenter.heroku.com/articles/understanding-ssl-on-heroku"
+              thumbnail={thumbnailHerokuSSL}
+            />
+
+            <WritingLink
+              title="TALK: The Dangers of Tribal Knowledge"
+              subtitle="RubyConf 2018"
+              desc="Are you constantly tapped on the shoulder for answers? Tired of being the Google for your team? Or perhaps you’re the new kid, having to ask a dozen different people to find answers to all your questions? These are the consequences of tribal knowledge..."
+              src="https://www.youtube.com/watch?v=o-JL-so5Gm8&t=4s"
+              thumbnail={thumbnailRubyConf}
+            />
+          </div>
+        </div>
+      </div>
+
 
       <div className="bg-[url('assets/dark-gradient-bg.png')] bg-cover shadow-inner px-10 py-40 w-full">
         <div className="max-w-[900px] text-center mx-auto paragraph">
