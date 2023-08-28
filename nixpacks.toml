@@ -2,4 +2,4 @@
   cmds = ['yarn run build']
 
 [start]
-  cmd = "yarn run start"
+  cmd = "yarn run dev"
