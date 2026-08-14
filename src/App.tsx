@@ -1,15 +1,33 @@
 import './App.css'
 import ExperienceItem from './WorkExperienceItem';
 import logo from "./assets/annie-sexton-logo.png";
-import avatar from "./assets/annie-sexton-headshot.png";
-import typistPic from "./assets/typist-screenshot.jpg";
-import genshoPic from "./assets/gensho-screenshot.jpg";
+import avatar from "./assets/annie-avatar.jpg";
 import thumbnailGit from "./assets/thumbnail-git-organized.png";
 import thumbnailHerokuSSL from "./assets/thumbnail-heroku-ssl.png";
 import thumbnailRubyConf from "./assets/thumbnail-rubyconf2018.png";
+import thumbnailCompression from "./assets/thumbnail-compression.png";
+import thumbnailJsOrigin from "./assets/thumbnail-jsorigin.png";
 import annie1 from "./assets/annie-1.jpg";
 import ExperienceDescription from './ExperienceDescription';
 import WritingLink from './components/WritingLink';
+import VideoCard from './components/VideoCard';
+
+// Videos I produced for the Fly.io YouTube channel.
+// View counts are a snapshot — refresh them when they start to feel stale.
+const flyVideos = [
+  { id: "QmTyKqoAb5M", date: "2026-04-22", title: "Auth without tokens", views: "4.1K views" },
+  { id: "FTOvkqBmg2c", date: "2026-03-04", title: "Durable storage – without disks?", views: "3.3K views" },
+  { id: "-gDjLF7x27k", date: "2026-02-24", title: "N-tier architecture is not your only option.", views: "7.1K views" },
+  { id: "O0iG4HSsr-I", date: "2026-02-17", title: "Litestream solves the #1 SQLite problem. This is how.", views: "10.5K views" },
+  { id: "0ycZjV8Ducw", date: "2025-05-28", title: "The coolest Fly.io feature you’re not using.", views: "2.3K views" },
+  { id: "74c1ByGvFPE", date: "2025-04-18", title: "What is MCP and how do you use it? | Model Context Protocol", views: "14.8K views" },
+  { id: "9VYwzmOjGkU", date: "2025-01-16", title: "Demystifying VPNs for web devs", views: "7.6K views" },
+  { id: "yxNpIL2MqEY", date: "2024-12-12", title: "We use containers now. Here’s why.", views: "21.8K views" },
+  { id: "y0Kxi-DTLjU", date: "2024-12-05", title: "Kubernetes without nodes", views: "11.3K views" },
+  { id: "dy2RJdDEvO0", date: "2024-11-26", title: "We built an orchestrator from scratch. Here’s why.", views: "16.8K views" },
+  { id: "DxHn9P5zr-g", date: "2024-10-08", title: "We did something *weird* with our CLI.", views: "12.1K views" },
+  { id: "wVil7wG-1yg", date: "2024-09-24", title: "We don’t use containers, and here’s why.", views: "12M views" },
+];
 
 function App() {
 
@@ -17,56 +35,21 @@ function App() {
     <>
       <div className="flex flex-col gap-14 items-center text-center justify-center md:py-56 px-10 py-24">
         <img src={logo} className="max-w-[644px] max-h-[76px] w-full"/>
-        <p className="text-gray-500 uppercase tracking-wider md:text-xl text-base">Product Developer &nbsp;•&nbsp; Designer &nbsp;•&nbsp; Engineer</p>
+        <p className="text-gray-500 uppercase tracking-wider md:text-xl text-base">Developer Educator &nbsp;•&nbsp; Software Engineer</p>
         <div className="max-w-[650px] p-6 rounded-lg bg-gray-50 border-gray-200 border flex md:flex-row flex-col gap-10 items-center md:text-left text-center">
-          <img src={avatar} width="138" alt="Headshot of Annie Sexton, Product Developer, Designer and Engineer" />
-          <div className="text-md leading-7">I'm a <strong>multi-faceted product leader and developer</strong> with over 11 years of experience working on everything from software engineering to UX design. I love working with talented teams to craft unparalleled user experiences.</div>
+          <img src={avatar} className="rounded-lg" width="138" alt="Headshot of Annie Sexton, Product Developer, Designer and Engineer" />
+          <div className="text-md leading-7">I'm a multi-faceted software developer and educator with over 15 years of experience. I specialize in nerd-sniping engineers into learning cool things through articles, talks, and videos.</div>
         </div>
       </div>
 
       <div className="bg-[url('assets/light-gradient-bg.png')] bg-cover shadow-inner px-10 py-20 w-full">
-        <div className="container mx-auto flex flex-col gap-20 md:gap-40">
-          <div className="grid gap-10 lg:grid-cols-2 md:gap-24 items-center">
-            <a href="https://typist.app" target="_blank">
-              <img src={typistPic} alt="Screenshot of Typist website" className="rounded-lg shadow-md shadow-gray-500 ring-4 ring-white" />
-            </a>
-            <div>
-              <div className="md:flex md:justify-between mb-3 items-center">
-                <p className="text-4xl uppercase font-bold">Typist</p>
-                <a href="https://typist.app" target="_blank" className="text-2xl">https://typist.app</a>
-              </div>
-              <div className="mb-10 flex items-center gap-4">
-                <div className="uppercase">Founder</div>
-                <div>•</div>
-                <time className="">Nov 2020 - Nov 2022</time>
-              </div>
-              <div className="paragraph">
-                <p className="text-xl leading-8">Typist is a refreshingly simple note-taking app built for developers, featuring auto-rendered Github-flavored markdown, ⌘K quick search, code block syntax highlighting, and keyboard shortcuts for days.</p>
-                <p className="text-xl leading-8">I've been on a long journey in search of the perfect writing app: something simple enough to quickly jot down notes, but equipped with the features I appreciate as a developer, such as markdown, code block syntax highlighting, and a myriad of keyboard shortcuts. Many apps came close, but each left me wanting. After years of searching, I decided to roll up my sleeves and build something myself.</p>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-[1000px] mx-auto">
+          <h2 className="text-center text-4xl mb-20 uppercase font-bold">Popular Videos</h2>
 
-          <div className="grid gap-10 lg:grid-cols-2 md:gap-24 items-center">
-            <div className="order-last lg:order-first">
-              <div className="md:flex md:justify-between mb-3 items-center">
-                <p className="text-4xl uppercase font-bold">Gensho</p>
-                <a href="https://genshoapp.com" target="_blank" className="text-2xl">https://genshoapp.com</a>
-              </div>
-              <div className="mb-10 flex items-center gap-4">
-                <div className="uppercase">Founder</div>
-                <div>•</div>
-                <time className="">Mar 2015 - Apr 2017</time>
-              </div>
-              <div className="paragraph">
-                <p>Gensho is a tool that helps users build foreign language flashcards quickly by looking up words as you highlight them. How it works: Copy and paste in any foreign text (anything you'd like to study from, like song lyrics, news articles, etc). Then simply highlight the words you don't know. You can then download that list of words and their definitions, and upload them to literally any flashcard program. Supported languages: Japanese, Spanish, French, German, and Italian.</p>
-                <p>Designed, developed and marketed a SaaS product from the ground up, built in Ruby on Rails and ReactJS.</p>
-                <p>Gensho was a passion project of mine that I eventually turned into a full-fledge SaaS product, and now boasts a healthy following of over 2000 users.</p>
-              </div>
-            </div>
-            <a href="https://genshoapp.com" target="_blank">
-              <img src={genshoPic} alt="Screenshot of Gensho website" className="rounded-lg shadow-md shadow-gray-500 ring-4 ring-white" />
-            </a>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {flyVideos.map((video) => (
+              <VideoCard key={video.id} {...video} />
+            ))}
           </div>
         </div>
       </div>
@@ -76,6 +59,21 @@ function App() {
         <h2 className="text-center text-4xl mb-20 uppercase font-bold">Technical Writing & Talks</h2>
 
           <div className="md:flex flex-col gap-5">
+
+            <WritingLink
+              title="Compression is prediction"
+              desc="I was reading about compression recently when I stumbled upon something crazy: that compressors and LLMs are, at their core, trying to solve the exact same problem. Both are built on the same bet — that if you can predict what comes next, you barely have to store it..."
+              src="https://ngrok.com/blog/compression-is-prediction"
+              thumbnail={thumbnailCompression}
+            />
+
+            <WritingLink
+              title="TALK: JavaScript: The Origin Story"
+              subtitle="Epic Web Conf 2025"
+              desc="JavaScript was hacked together in 10 days as a “toy language,” and somehow became the backbone of the modern web. This talk traces that unlikely path: the browser wars, AJAX, jQuery, V8 and the birth of Node, and the framework era that followed..."
+              src="https://www.epicweb.dev/talks/javascript-the-origin-story"
+              thumbnail={thumbnailJsOrigin}
+            />
 
             <WritingLink
               title="Git Organized: A Better Git Flow"
@@ -108,14 +106,35 @@ function App() {
           <div className="flex gap-8 justify-center w-full mb-10">
             <img src={annie1} alt="" className="rounded-lg w-48 ring-white ring-2 shadow-lg" />
           </div>
-          <p className="text-white">During my 11 years working as an engineer, I’ve fallen in love with every aspect of product development, from programming, to strategy, to design. While my roots are in development, I’ve collected a wide breadth of skills across many areas of expertise, thanks to my endless curiosity and hunger for learning.</p>
-          <p className="text-white">Outside of work I love to travel, cook and write fiction. I was born and raised in the heart of Texas in Austin, and in 2019, after a considerable amount of globe-trotting, I decided to make a home for myself in the lush Pacific Northwest, in Portland, Oregon.</p>
+          <p className="text-white">As a self-taught engineer, I've always had a passion for learning and education. I strive to instill the same curiosity in others through my writing, videos, and talks.</p>
+          <p className="text-white">Outside of work I love to draw comics and hang out with my dog, Arlo. I was born and raised in the heart of Texas in Austin, and in 2019, after a considerable amount of globe-trotting, I decided to make a home for myself in the lush Pacific Northwest, in Portland, Oregon.</p>
         </div>
       </div>
 
       <div className="bg-[url('assets/light-gradient-bg.png')] bg-cover shadow-inner px-10 py-20 w-full">
         <div className="max-w-[800px] mx-auto">
           <h2 className="text-center text-2xl mb-40 mt-20 uppercase opacity-60">Work History</h2>
+
+          <ExperienceItem
+            company="ngrok"
+            companySubtitle="Unified ingress platform for apps, APIs and AI agents"
+          >
+            <ExperienceDescription title="Developer Educator" duration="Jun 2026 - Present">
+              <p>Research technical concepts relevant to working developers and turn them into in-depth articles and videos.</p>
+              <p>Recent work includes <a href="https://ngrok.com/blog/compression-is-prediction" target="_blank">Compression is prediction</a>, a deep dive into the shared foundation of data compressors and LLMs — walking through entropy coding, Shannon entropy, and context modeling with interactive visualizations.</p>
+            </ExperienceDescription>
+          </ExperienceItem>
+
+          <ExperienceItem
+            company="Fly.io"
+            companySubtitle="Public cloud for deploying apps close to users"
+          >
+            <ExperienceDescription title="Developer Advocate & Video Content Creator" duration="Jul 2024 - Jun 2026">
+              <p>Built and hosted Fly.io's YouTube channel, producing technical videos for professional developers on cloud infrastructure, containers, databases, and AI tooling. Several videos surpassed 200K views, and one over 12 million.</p>
+              <p>Covered the full range from deep infrastructure explainers — VM orchestration, edge routing, running Kubernetes without nodes — to hands-on tutorials on Dockerfiles, WebSockets, VPNs, and SQLite replication with Litestream.</p>
+              <p>Owned the full production pipeline: topic research, scripting, filming, and editing.</p>
+            </ExperienceDescription>
+          </ExperienceItem>
 
           <ExperienceItem
             company="Render"
