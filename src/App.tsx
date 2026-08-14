@@ -8,6 +8,9 @@ import thumbnailRubyConf from "./assets/thumbnail-rubyconf2018.png";
 import thumbnailCompression from "./assets/thumbnail-compression.png";
 import thumbnailJsOrigin from "./assets/thumbnail-jsorigin.png";
 import annie1 from "./assets/annie-1.jpg";
+import webcomicPic from "./assets/webcomic-screenshot.jpg";
+import typistPic from "./assets/typist-screenshot.jpg";
+import genshoPic from "./assets/gensho-screenshot.jpg";
 import ExperienceDescription from './ExperienceDescription';
 import WritingLink from './components/WritingLink';
 import VideoCard from './components/VideoCard';
@@ -113,7 +116,6 @@ function App() {
 
       <div className="bg-[url('assets/light-gradient-bg.png')] bg-cover shadow-inner px-10 py-20 w-full">
         <div className="max-w-[800px] mx-auto">
-          <h2 className="text-center text-2xl mb-40 mt-20 uppercase opacity-60">Work History</h2>
 
           <ExperienceItem
             company="ngrok"
@@ -186,14 +188,85 @@ function App() {
         </div>
       </div>
 
+      <div className="bg-[url('assets/light-gradient-bg.png')] bg-cover shadow-inner px-10 py-20 w-full">
+        <div className="max-w-[900px] text-center mx-auto paragraph">
+            <h2 className="text-center text-4xl mb-20 uppercase font-bold">Projects</h2>
+        </div>
+
+        <div className="container mx-auto flex flex-col gap-20 md:gap-40">
+          <div className="grid gap-10 lg:grid-cols-2 md:gap-20 items-center">
+            <a href="https://webcomic.studio" target="_blank">
+              <img src={webcomicPic} alt="Screenshot of Webcomic Studio website" className="rounded-lg shadow-md shadow-gray-500 ring-4 ring-white" />
+            </a>
+            <div>
+              <div className="md:flex md:justify-between mb-3 items-center">
+                <h3 className="text-2xl uppercase font-bold">Webcomic Studio</h3>
+              </div>
+              <div className="mb-4 flex items-center gap-4">
+                <time className="">Dec 2025 - Present</time>
+                <div>•</div>
+                <a href="https://webcomic.studio" target="_blank" className="text-base">webcomic.studio</a>
+              </div>
+              <div className="paragraph">
+                <p className="text-xl leading-8">Webcomic Studio is a free online hub for indie comic fans and creators. Readers can browse over 1000 independent web comics, and creators can spin up a custom website for their own comic in minutes.</p>
+                <p className="text-xl leading-8">Creators get a fully customizable site: their own fonts and colors, custom pages, social links, logos and banners, and support for a custom domain. Pages and chapters can be scheduled ahead of time, and each comic can be read as a vertical scroll, a double-spread, or single pages.</p>
+                <p className="text-xl leading-8">It also comes with built-in AI-scraper protection, blocking traffic from known bots.</p>
+                <p className="text-xl leading-8">And yes, I have a comic too: <a href="https://redstonecomic.com">redstonecomic.com</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-10 lg:grid-cols-2 md:gap-20 items-center">
+            <div className="order-last lg:order-first">
+              <div className="md:flex md:justify-between mb-3 items-center">
+                <h3 className="text-2xl uppercase font-bold mb-0">Typist</h3>
+              </div>
+              <div className="mb-4 flex items-center gap-4">
+                <time className="">Nov 2020 - Nov 2022</time>
+                <div>•</div>
+                <div className="text-base"><em>(no longer maintained)</em></div>
+              </div>
+              <div className="paragraph">
+                <p className="text-xl leading-8">Typist is a refreshingly simple note-taking app built for developers, featuring auto-rendered Github-flavored markdown, ⌘K quick search, code block syntax highlighting, and keyboard shortcuts for days.</p>
+                <p className="text-xl leading-8">I've been on a long journey in search of the perfect writing app: something simple enough to quickly jot down notes, but equipped with the features I appreciate as a developer, such as markdown, code block syntax highlighting, and a myriad of keyboard shortcuts. Many apps came close, but each left me wanting. After years of searching, I decided to roll up my sleeves and build something myself.</p>
+              </div>
+            </div>
+            <a href="https://typist.app" target="_blank">
+              <img src={typistPic} alt="Screenshot of Typist website" className="rounded-lg shadow-md shadow-gray-500 ring-4 ring-white" />
+            </a>
+          </div>
+
+          <div className="grid gap-10 lg:grid-cols-2 md:gap-20 items-center">
+            <a href="https://genshoapp.com" target="_blank">
+              <img src={genshoPic} alt="Screenshot of Gensho website" className="rounded-lg shadow-md shadow-gray-500 ring-4 ring-white" />
+            </a>
+            <div>
+              <div className="md:flex md:justify-between mb-3 items-center">
+                <h3 className="text-2xl uppercase font-bold mb-0">Gensho</h3>
+              </div>
+              <div className="mb-4 flex items-center gap-4">
+                <time className="">Mar 2015 - Apr 2017</time>
+                <div>•</div>
+                <div className="text-base"><em>(no longer maintained)</em></div>
+              </div>
+              <div className="paragraph">
+                <p>Gensho is a tool that helps users build foreign language flashcards quickly by looking up words as you highlight them. How it works: Copy and paste in any foreign text (anything you'd like to study from, like song lyrics, news articles, etc). Then simply highlight the words you don't know. You can then download that list of words and their definitions, and upload them to literally any flashcard program. Supported languages: Japanese, Spanish, French, German, and Italian.</p>
+                <p>Designed, developed and marketed a SaaS product from the ground up, built in Ruby on Rails and ReactJS.</p>
+                <p>Gensho was a passion project of mine that I eventually turned into a full-fledge SaaS product, and now boasts a healthy following of over 2000 users.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       
       <div className="flex items-center justify-center py-20">
         <div className="flex justify-center uppercase">
-          <a href="https://typist.app" target="_blank">Typist App</a>
+          <a href="https://webcomic.studio" target="_blank">Webcomic Studio</a>
+          <div className="text-teal-600 mx-4">•</div>
+          <a href="https://bsky.app/profile/anniesexton.com" target="_blank">Bluesky</a>
           <div className="text-teal-600 mx-4">•</div>
           <a href="https://www.linkedin.com/in/annie-sexton-11472a46/" target="_blank">LinkedIn</a>
-          <div className="text-teal-600 mx-4">•</div>
-          <a href="https://twitter.com/_anniebabannie_" target="_blank">Twitter</a>
         </div>
       </div>
 
