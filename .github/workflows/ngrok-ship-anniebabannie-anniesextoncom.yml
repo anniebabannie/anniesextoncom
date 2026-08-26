@@ -1,4 +1,4 @@
-name: "Build and Push Container (anniebabannie-anniesextoncom / app_3ITCfMbi4jpd9bZ8TmFEqGym8CZ)"
+name: "Build and Push Container (anniesextoncom / app_3ITCfMbi4jpd9bZ8TmFEqGym8CZ)"
 
 on:
   push:
