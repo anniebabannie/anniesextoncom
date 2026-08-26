@@ -1,4 +1,4 @@
-name: "Build and Push Container (anniebabannie-anniesextoncom / app_3HvAUZrxXsuTZo6cpz3XJltGDkZ)"
+name: "Build and Push Container (anniebabannie-anniesextoncom / app_3ITCfMbi4jpd9bZ8TmFEqGym8CZ)"
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_REFERENCE: "registry.ship.ngrok.com/ac_3egzhhvbofjjeernvloocel0bpp/app_3hvauzrxxsutzo6cpz3xjltgdkz"
-  NGROK_APP_ID: "app_3HvAUZrxXsuTZo6cpz3XJltGDkZ"
+  IMAGE_REFERENCE: "registry.ship.ngrok.com/ac_3egzhhvbofjjeernvloocel0bpp/app_3itcfmbi4jpd9bz8tmfeqgym8cz"
+  NGROK_APP_ID: "app_3ITCfMbi4jpd9bZ8TmFEqGym8CZ"
 
 jobs:
   build-and-push:
